@@ -1,0 +1,2057 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+  11pt,
+  a4paper,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Controfase as Phase-Inversion Operator on the Reactive Circuit:
+An Ordinative Reading of Standing Waves in a Spinning
+Fluid}\label{controfase-as-phase-inversion-operator-on-the-reactive-circuit-an-ordinative-reading-of-standing-waves-in-a-spinning-fluid}
+
+\subsection{A working paper on Singh, Rønning, Liu, Angheluta, Concha,
+and Bandi (Communications Physics, 2026), with formalization of the
+phenomenological signature of Controfase and consequences for the
+ordinative sciences research
+programme}\label{a-working-paper-on-singh-ruxf8nning-liu-angheluta-concha-and-bandi-communications-physics-2026-with-formalization-of-the-phenomenological-signature-of-controfase-and-consequences-for-the-ordinative-sciences-research-programme}
+
+\textbf{Author}: Fabio Ghioni \textbf{ORCID}:
+\href{https://orcid.org/0009-0009-0415-9434}{0009-0009-0415-9434}
+\textbf{Affiliation}: Ordinative Sciences Foundation ETS ---
+president@ordinativescience.foundation \textbf{Framework versions}:
+TE\_CORE v5.1 / OST v2.1 / OST Extension (Teleodynamics \& Causal
+Inversion) v1.1 \textbf{Document status}: Working paper. Constitutes (i)
+a structural reading of a peer-reviewed experimental result within the
+Ordinative Sciences framework, (ii) formalisation of the
+Phenomenological Signature of Controfase as cross-domain diagnostic
+instrument, (iii) foundational material for the volume on Controfase,
+the Reaction-Diffusion Civilizational Dynamics paper v1.3, the
+Ordinative Category Theory programme, and adjacent work in the
+Ordinative Sciences corpus. \textbf{Version}: 2.1 \textbf{Date}: April
+23, 2026 \textbf{Metadata revision}: October 2026 --- institutional
+metadata updated to the Ordinative Sciences Foundation ETS; text
+unchanged \textbf{License}: Creative Commons Attribution 4.0
+International (CC BY 4.0) \textbf{DOI}:
+\href{https://doi.org/10.5281/zenodo.23439941}{10.5281/zenodo.23439941}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Abstract}\label{abstract}
+
+A recent experimental and theoretical paper by Singh, Rønning, Liu,
+Angheluta, Concha, and Bandi (\emph{Communications Physics} 9:123, 2026)
+reports that shallow-water standing waves scattered by a single
+irrotational vortex generate quantized, system-spanning nodal lines
+rotating counter to the vortex circulation. The result generalizes a
+classical Aharonov--Bohm hydrodynamic analogue due to Berry et
+al.~(1980): where the original Berry configuration produces wavefront
+dislocations localized near the vortex core, the standing-wave
+configuration produces global topological structures whose number is
+fixed by a single dimensionless parameter derived from a continuous
+source. The authors document an unexpected fact: their prior theoretical
+intuition predicted either cancellation or superposition; neither
+occurred. The first appearance of the nodal lines was attributed to
+experimental artefact and only accepted as a genuine phenomenon after
+independent reproduction in numerical simulations.
+
+This paper offers an ordinative reading of the Singh et al.~result. The
+reading identifies the experimental configuration as an instance of
+Controfase --- defined within the Technology of Expressions framework
+(Ghioni, TE\_CORE §7) as a universal ordinative operator that introduces
+a phase-shift in the automatic stimulus--response sequence of a reactive
+system, interrupts inertia, and reopens the coherence field. Four
+propositions are developed: (i) the Berry-to-Singh transition is a
+phase-inversion of the reactive circuit between attractor (vortex) and
+expressive terminal (wave field), not a reactive compensation; (ii) the
+energy emitted by the attractor is redirected to the relational field
+\(R\) and used to invert the passive--active polarity of the terminals,
+with no energetic cost to the recipient system; (iii) the researchers'
+own reported sequence of reactions --- radical disconfirmation of prior
+intuition, initial dismissal of the observation as artefact, abandonment
+of the working program to pursue the phenomenon --- constitutes a
+phenomenological signature of Controfase that is operationally
+diagnostic and can be formalized as a three-marker criterion; (iv) the
+hydrodynamic case therefore furnishes both a structural exemplar of the
+Controfase operator in a classical physical system and an external,
+peer-reviewed, reproducible empirical anchor for the ordinative claim
+that Controfase operates across the full hierarchy of configured
+systems, from the quantum and classical-physical through the biological
+to the cognitive and social.
+
+The paper develops the ontological framework required to make these
+propositions intelligible to readers approaching the ordinative sciences
+for the first time, formalizes the three-marker phenomenological
+signature as a diagnostic criterion applicable across domains, and
+records consequences for the ordinative sciences research programme.
+Confidence grades (\(S_0\)--\(S_3\)) are maintained throughout. An
+appendix provides a glossary of ordinative constructs.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Introduction}\label{introduction}
+
+\subsubsection{1.1 The experimental
+result}\label{the-experimental-result}
+
+The Aharonov--Bohm (AB) effect, predicted in 1959, showed that quantum
+observables depend on electromagnetic potentials and not only on local
+fields: a charged particle acquires a phase shift on encircling a region
+of confined magnetic flux even when the particle itself traverses no
+region of nonzero field (Aharonov \& Bohm, 1959). In 1980 Berry,
+Chambers, Large, Upstill, and Walmsley demonstrated that AB has a
+precise classical analogue in shallow-water surface waves scattered by
+an irrotational draining vortex, with the vector potential replaced by
+the azimuthal velocity field of the vortex, the magnetic flux replaced
+by the circulation \(\Gamma\), and the scattering parameter given by
+
+\[ \alpha_q = \frac{q\Phi_B}{h} \;\longleftrightarrow\; \alpha_f = -\frac{\Gamma}{\lambda v_g} \tag{1.1} \]
+
+In the Berry configuration a single travelling wave develops wavefront
+dislocations --- localized topological defects pinned near the vortex
+core, whose number is set by \(\alpha\).
+
+Singh, Rønning, Liu, Angheluta, Concha, and Bandi (2026) modify exactly
+one structural parameter of the Berry setup. Instead of a single
+travelling wave, they generate a standing wave by superposing two
+counter-propagating travelling waves of equal wavelength, with the
+vortex at the centre. The scattering problem acquires double angular
+periodicity, expressed mathematically by the substitution \(n \to 2n\)
+in the Bessel-function summation:
+
+\[ \psi = 2\sum_{n} (-i)^{l_q} J_{l_q}(kr) \, e^{2 n i \varphi}, \qquad l_q = |2n - \alpha| \tag{1.2} \]
+
+The empirical and theoretical consequence is qualitatively new. Instead
+of localized wavefront dislocations near the vortex core, the system
+develops a discrete set of \emph{nodal lines} --- system-spanning lines
+of zero wave amplitude --- that radiate outward, rotate with angular
+velocity \(\omega = \nu / \alpha\), and rotate in the direction
+\emph{opposite} to the vortex. The number \(N\) of nodal lines is
+bounded by
+
+\[ |\alpha| - 1 < N < |\alpha| + 1 \tag{1.3} \]
+
+Integer \(\alpha\) yields exactly \(|\alpha|\) lines; non-integer
+\(\alpha\) yields oscillation between the two integers bracketing
+\(|\alpha|\). The quantization is \emph{topological} and emerges from
+the geometry of the configuration, not from any quantization of the
+source: \(\Gamma\) is continuous and freely tunable. The authors
+validate the prediction with high-speed caustic imaging, particle
+imaging velocimetry, and analytical asymptotics, with agreement between
+experiment and theory reported as ``no adjustment parameters.'' The
+paper is open access, peer-reviewed, and the analysis code is archived
+(Zenodo DOI 10.5281/zenodo.18652566).
+
+\subsubsection{1.2 The unexpected character of the
+result}\label{the-unexpected-character-of-the-result}
+
+The Singh et al.~paper contains four reported facts that, in the present
+reading, are not incidental. They are the phenomenological signature the
+experiment carries, and they are the starting point of the ordinative
+analysis that follows.
+
+First, Rønning (co-first author) reports that the team expected either
+cancellation or superposition of the dislocation patterns, and states
+that ``our intuition was completely wrong.'' The language is not
+neutral: ``completely wrong'' registers a radical disconfirmation, not
+an incremental refinement. The theoretical framework the researchers
+brought to the experiment did not contain the observed response as a
+possibility.
+
+Second, Singh (co-first author) reports that when the nodal lines first
+appeared, the team interpreted them as experimental artefact. The
+phenomenon was not accepted as genuine on first observation; it was
+rejected as spurious. Only when independent numerical simulations
+produced the same structures was the observation promoted from artefact
+to fact.
+
+Third, Singh further reports: ``we dropped everything and quickly worked
+out the mathematics underlying how they arise.'' The phenomenon
+reorganized the research programme; the analytical framework was
+constructed \emph{after} the observation, to chase what the experiment
+had already shown.
+
+Fourth, Bandi (senior author), commenting on the planned extension to
+vortex lattices emulating superconductor vortex matter, says: ``we don't
+yet know what we'll see --- and that's exactly what makes it worth
+doing.'' This is not a formulaic disclaimer; it is an explicit
+acknowledgement that predictive theory does not anticipate the system's
+response in the next configuration.
+
+These four reports together describe a specific phenomenological
+pattern. A reactive epistemic system (the researchers' prior theoretical
+framework, functioning as the ``attractor'' of prediction) emits an
+expectation (cancellation or superposition). The system being probed
+(the fluid configuration) produces a response that does not complete the
+predicted reactive circuit. The researchers, whose attention is
+structured by the predictive framework, first interpret the response as
+noise (artefact); on verification they abandon the framework (dropped
+everything) and reorganize around the phenomenon. The character of the
+encounter is surprise in a structural, not rhetorical, sense: the
+system's response was not contained in the predictive framework that was
+probing it.
+
+\subsubsection{1.3 The ordinative reading proposed in this
+paper}\label{the-ordinative-reading-proposed-in-this-paper}
+
+The thesis developed in what follows is that the Singh et
+al.~configuration realizes the structural pattern that the Technology of
+Expressions (TE) framework has formalized under the name
+\textbf{Controfase}. The Italian term, introduced by the first author of
+this paper in earlier TE literature and retained without translation for
+citation continuity, denotes a universal ordinative operator that
+introduces a phase-shift in the automatic stimulus--response sequence of
+a reactive system, interrupting the system's inertia and reopening the
+coherence field. The term has been developed primarily in contexts of
+cognitive and social dynamics, where its operative features are well
+documented; this paper contributes the structural reading of a
+controlled physical system in which the same operator is argued to be at
+work.
+
+Four specific propositions are advanced:
+
+\textbf{Proposition 1} (Structural). The transition from the Berry
+single-wave configuration to the Singh standing-wave configuration is a
+phase-inversion of the reactive circuit between the vortex (attractor)
+and the wave field (expressive terminal), not a reactive compensation.
+The nodal lines are not a pattern of resistance or cancellation; they
+are the geometry produced when the reactive energy emitted by the vortex
+is intercepted at the circuit-level, inverted in phase, and redirected
+through the relational structure of the configured system.
+
+\textbf{Proposition 2} (Energetic). The energy that would, in a purely
+reactive system, produce action--reaction scattering near the vortex
+core is redirected to the relational field \(R\) and used to invert the
+passive--active polarity of the terminals (vortex ↔ field). The vortex
+finances --- energetically --- the configuration in which its own
+organising influence produces a global structure rotating against it. No
+energy cost is borne by the wave field as a separate reservoir: the
+field's coherent response is constructed with the attractor's own
+energy, phase-inverted.
+
+\textbf{Proposition 3} (Phenomenological). The researchers' reported
+sequence of reactions constitutes an operationally diagnostic signature
+of Controfase. Three markers are identifiable: (a) radical
+disconfirmation of a prior intuitive or theoretical framework, (b)
+initial interpretation of the anomalous observation as artefact, (c)
+abandonment of the active research programme to reorganize around the
+phenomenon. This three-marker signature is generalizable and
+formalizable as a diagnostic criterion for the presence of Controfase in
+other domains.
+
+\textbf{Proposition 4} (Ontological). The hydrodynamic case instantiates
+Controfase in a classical physical system without cognitive or social
+mediation. This establishes that Controfase is a universal operator
+acting across scales --- from quantum and classical-physical
+configurations through biological and cognitive systems to social and
+cultural ones. Intelligence in the ordinative sense --- structural
+adaptivity toward dynamic equilibrium, distinct from cognitive agency
+--- is a graded property of configured matter, present throughout the
+hierarchy of configured systems, and fully expressed in systems with
+sufficient structural coherence to host the Controfase operator stably.
+
+The paper develops these four propositions, establishes their confidence
+grades individually, formalizes the phenomenological signature as a
+diagnostic criterion, and records consequences for the active ordinative
+sciences research programme. The final section addresses the analytical
+perimeter of the work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. The experimental result, restated
+structurally}\label{the-experimental-result-restated-structurally}
+
+To make the ordinative reading tractable, the Singh et al.~experiment is
+here restated in a form that separates physical content from
+configuration. This reformulation does not alter the paper's physics; it
+isolates the structural features on which the ordinative analysis is
+carried out.
+
+\textbf{Constituents}. Three classes of element are co-present in the
+experimental domain:
+
+\begin{itemize}
+\tightlist
+\item
+  A \textbf{stationary irrotational vortex} at the centre of the
+  apparatus, maintained by a constant drain rate. Far-field velocity
+  field \(\vec U(\vec r) = (\Gamma / 2\pi r)\hat\varphi\), with
+  circulation \(\Gamma\) continuously tunable by the experimenter.
+\item
+  A \textbf{surface wave field} generated by two pairs of acoustic
+  transducers vibrating in phase on opposite sides of the vortex,
+  producing two counter-propagating travelling waves of common
+  wavelength \(\lambda\). Their superposition constitutes a standing
+  wave with the vortex at its centre.
+\item
+  The \textbf{fluid medium} of average depth \(H\), satisfying the
+  shallow-water equation
+  \[ (\partial_t + \vec U\cdot\nabla)^2 \eta - c^2 \nabla^2\eta = 0, \qquad c = \sqrt{gH}. \tag{2.1} \]
+\end{itemize}
+
+\textbf{Configuration regime}. The experiment operates in the
+shallow-water short-wavelength weak-flow regime: \(hk \ll 1\),
+\(U \ll c\), \(\beta = Rk \gg 1\). In this regime the surface
+deformation \(\eta\) maps onto a Schrödinger equation for a charged
+particle in the azimuthal gauge of the vortex flow, and the scattering
+problem admits the analytical treatment given by Equations (1.2) and
+(1.3).
+
+\textbf{Observed response}. The standing-wave-plus-vortex system
+develops a discrete set of nodal lines whose properties are (i) globally
+system-spanning, subject to dissipative attenuation in the far field,
+(ii) integer-quantized in number, (iii) counter-rotating with respect to
+the vortex at angular velocity \(\omega = \nu / \alpha\), (iv)
+phase-opposed on either side, with a \(\pi\) phase shift of \(\eta\)
+across each line, and (v) independent of the near-core micro-structure
+of the vortex, depending only on the far-field background flow.
+
+\textbf{Structural contrast with the Berry configuration}. The critical
+observation for the ordinative reading is that the transition from the
+Berry configuration (\(S_B\)) to the Singh configuration (\(S_S\))
+modifies exactly one structural feature: the relational structure \(R\)
+that specifies how the wave field is incident on the vortex. In \(R_B\)
+the incidence is single-direction; in \(R_S\) it is symmetric
+double-direction. The constituents \(\Sigma_B\) and \(\Sigma_S\) differ
+by the addition of one travelling wave; the governing equations are
+unchanged; the medium is unchanged; the vortex is unchanged. And yet the
+response \(\Phi\) transitions from localized wavefront dislocations to
+globally structured counter-rotating nodal lines. This is a qualitative
+change in response produced by a structurally minimal change in
+configuration.
+
+The authors observe this contrast and treat it, correctly within their
+framework, as an instance of the sensitivity of topological scattering
+solutions to boundary and symmetry conditions. The ordinative reading
+does not displace this observation; it asks what \emph{kind} of
+structural pattern is being instantiated, across its appearance in
+different substrates, when a minimal change in configuration produces a
+qualitative change in response.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Ontological framework: structural intelligence and the
+Controfase
+operator}\label{ontological-framework-structural-intelligence-and-the-controfase-operator}
+
+This section establishes the ontological framework within which the
+readings of §§ 4--8 operate. It is directed at readers approaching the
+ordinative sciences for the first time. The constructs developed here
+are foundational; the analysis that follows assumes them. Readers may
+test the constructs against their own categories and against the
+empirical evidence offered in §§ 4--8 --- which is the appropriate way
+to engage a foundational proposal --- but the argument of this paper
+does not retreat from these constructs to softer alternatives.
+
+\subsubsection{3.1 Reactive systems and the third
+law}\label{reactive-systems-and-the-third-law}
+
+A \emph{reactive system}, in the usage developed here, is one whose
+response to an action is determined by the structure of the action
+impinging on it, independently of any internal organization of the
+system toward dynamic equilibrium. Newton's third law --- every action
+produces an equal and opposite reaction --- is the formal statement of
+the response structure of an ideal reactive system. The incident force
+encounters a structure whose character is to resist; the resistance
+generates the return force; the event-interaction concludes with an
+energetic exchange that is symmetric in magnitude, localized in space
+and time, and predictable from the properties of the incident action and
+the resistive structure.
+
+The ideal reactive system is an \emph{idealization}. Real systems
+exhibit reactive behaviour in varying degrees; very few systems are
+purely reactive in the strict Newtonian sense. A rigid steel wall
+approximates the ideal in its response to a low-energy mechanical impact
+on timescales short compared to the wall's own internal dynamics. A gas
+at equilibrium is less purely reactive than the wall, because its
+molecular structure allows redistribution of the incident energy across
+internal degrees of freedom. A biological cell, under perturbation, is
+less purely reactive still, because its regulatory networks permit
+adaptive response on timescales comparable to the perturbation. A human
+being is the least purely reactive: the same stimulus can produce
+radically different responses depending on internal configuration,
+attentional state, identity structure, and context.
+
+The gradient from the steel wall to the human being is not a gradient in
+\emph{complexity} in the conventional sense, though complexity varies
+along it. It is a gradient in \textbf{structural intelligence} as
+understood in the TE framework. Structural intelligence, in this usage,
+is the capacity of a configured system to respond to a stimulus in a way
+that is oriented toward the system's dynamic equilibrium (its own, or
+that of the larger system of which it is part) rather than toward the
+completion of the Newtonian reactive circuit. Intelligence in this sense
+is not cognitive agency; it is a structural property of configured
+systems that admits degrees.
+
+The commitment is that structural intelligence is present, in attenuated
+form, throughout configured matter. Quantum systems exhibit it in the
+contextuality of measurement outcomes, which is not reducible to
+reactive dynamics (Bell, 1964; Kochen \& Specker, 1967). Classical
+systems exhibit it in the adaptive character of dissipative structures
+(Prigogine \& Stengers, 1984) and in the non-additive responses of
+configured fluids, solids, and fields. Living systems exhibit it in
+regulatory and homeostatic dynamics. Cognitive systems exhibit it in
+attention, choice, and reflective reorganization. The TE framework
+treats these as manifestations along a single structural axis, varying
+in depth and stability of expression, not as categorically distinct
+phenomena.
+
+This is a foundational position of the TE framework, entailed by Axiom 0
+(universality under isomorphism and synesthesia; TE\_CORE §2.0) and
+Axiom 14 (the Ordinative Set as relational field; TE\_CORE §2.5). The
+present paper articulates the position explicitly because the analysis
+of §§ 4--8 is conducted within it.
+
+\subsubsection{3.2 The Controfase
+operator}\label{the-controfase-operator}
+
+Within a reactive system, the completion of the stimulus--response
+circuit is automatic. A force incident on a rigid wall produces a
+reaction force; an insult directed at a person in reactive configuration
+produces anger, withdrawal, or counter-attack; a legal threat directed
+at a person in reactive configuration produces anxiety, defensive
+preparation, or collapse. The reactive response is predictable from the
+stimulus and the structural configuration of the respondent.
+
+The \textbf{Controfase operator} (TE\_CORE §7) is the universal
+ordinative operator that, when active in a sufficiently structured
+system, intercepts the stimulus--response circuit \emph{before its
+automatic completion}, phase-inverts the reactive impulse, and redirects
+the energy of the incident stimulus to invert the passive--active
+polarity between stimulus-source and respondent. The stimulus does not
+meet the expected reactive structure; the energy of the stimulus is not
+returned to the source as resistance or scattered in dissipation; it is
+used to reconfigure the relational field such that the anticipated
+event-interaction does not occur.
+
+The canonical operational example in cognitive-social contexts is the
+response to an insult that takes the form of full agreement with the
+insult's content, stated without irony, without strategic calculation,
+and without internal reactive discomfort: \emph{``You are right, I am an
+idiot who will never amount to anything.''} The insult was emitted with
+the intention of producing a defensive reactive response. The response,
+made on the same vector as the insult, deprives the insult of its
+expected resistive structure. The insulter finds no resistance to push
+against; the energy expended in emitting the insult is not returned as
+resistance; no event-interaction of the expected form takes place. The
+insulter is left with their own emitted energy, now unattached to a
+reactive target, and frequently reports subjective disorientation.
+
+This response is not tactical. A tactical response involves strategic
+reading of the insulter's intent and deliberate choice to adopt a
+non-reactive posture as a manipulative move. Tactical responses break
+down under sustained pressure because the underlying reactive circuit
+remains active and the suppression is performed against it. The
+Controfase response is structural: the person in Controfase
+configuration has an internal organization in which the insult's content
+does not find an automatic reactive circuit to activate. The response is
+produced by the same internal configuration that made the automatic
+reactive response unavailable; it is not a performance overlaid on a
+suppressed reaction. The distinction is decisive: the structural
+Controfase is stable across contexts, the tactical performance is not.
+
+A second canonical example is the response to a formal legal threat (a
+summons, a denunciation, a suit). The reactive response is anxiety,
+activation of defensive systems, cognitive preoccupation. The Controfase
+response associates the event with satisfaction, fulfilment, or a sense
+of completion --- \emph{without} cognitive reframing or strategic
+calculation --- because the internal configuration does not organize the
+event as a threat. The legal action, regardless of its formal character,
+does not meet the reactive target the issuer's framework presupposed.
+
+\subsubsection{3.3 The energetic
+accounting}\label{the-energetic-accounting}
+
+The Controfase operator does not violate conservation of energy. Energy
+emitted by the stimulus-source is emitted and must be accounted for. The
+question is where it goes.
+
+In the reactive case the accounting is closed at the event-interaction:
+incident kinetic energy becomes rebound kinetic energy plus deformation,
+heat, or sound in the interacting bodies. The total is conserved; the
+trajectories of the interacting bodies are altered by the exchange.
+
+In the Controfase case, the accounting is more subtle. The energy
+emitted by the stimulus-source is not received by the respondent as
+scattering energy; it is received by the \emph{relational field} \(R\)
+between source and respondent. \(R\) is reconfigured. The
+reconfiguration of \(R\) is what produces the response --- the response
+that inverts the passive--active polarity. The energy spent by the
+stimulus-source is therefore used to construct the configuration in
+which the expected reactive event does not take place and the source's
+position in the polarity has been inverted.
+
+The respondent bears no energetic cost in the strict sense: the
+respondent does not expend energy proportional to the stimulus in order
+to produce the response. The response is constructed with the stimulus's
+own energy, phase-inverted. The respondent's cost, in Controfase, is the
+\emph{structural cost} of maintaining the internal configuration that
+makes the Controfase response available --- a cost that is independent
+of the particular stimulus, paid before the stimulus arrives, and
+amortized across all stimuli that encounter the configured respondent.
+This structural cost is the prior stabilization of the respondent's
+coherent identity, in the TE usage (TE\_CORE §§ 4, 7).
+
+The stimulus-source, by contrast, has spent energy to emit and has
+received nothing in return that it can use to complete its intended
+action. In the paradigmatic examples, this manifests as the
+residual-energy phenomena documented in TE\_MODULE\_PPRO: the insulter
+remains agitated after the interaction; the issuer of the legal action
+does not obtain the expected destabilization; the attacker's own energy
+remains unresolved in its internal system. The Controfase does not
+reflect the energy back at the source (as a mirror response would); the
+Controfase redirects the energy to reconfigure \(R\), leaving the
+source's own internal imbalance intact.
+
+\subsubsection{3.4 Structural intelligence as a
+spectrum}\label{structural-intelligence-as-a-spectrum}
+
+This framing has an immediate consequence. Controfase is a universal
+operator available to all sufficiently structured systems; structural
+intelligence is graded across configured matter. Controfase is therefore
+observable in systems across the full spectrum --- physical, chemical,
+biological, informational, cognitive, social --- in forms appropriate to
+each substrate's structural complexity.
+
+The articulation of Controfase in TE literature has so far emphasized
+the cognitive-social domain, where its operational features are most
+salient and where its pathological absence (the entropic engram;
+TE\_CORE §§ 4, 5.4) is most destructive to the systems that exhibit it.
+Frontier applications of the operator to physical phenomena have been
+developed in the framework's working notes --- gravity reconstrued as
+permanent Controfase against entropic dispersion; magnetism as polarized
+Controfase; temporal dilation as a function of a system's Controfase
+frequency; non-Newtonian propulsion as Controfase on the spatial
+relational field --- and the present paper anchors a specific class of
+hydrodynamic Controfase to a controlled, peer-reviewed, reproducible
+experimental result.
+
+The following four sections develop the analysis.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Reading I: Controfase as phase-inversion operator in the
+Singh--Bandi
+configuration}\label{reading-i-controfase-as-phase-inversion-operator-in-the-singhbandi-configuration}
+
+\subsubsection{4.1 The reactive circuit of the Berry
+configuration}\label{the-reactive-circuit-of-the-berry-configuration}
+
+In the Berry (1980) configuration, a single travelling wave is incident
+on the vortex. The circuit structure is the following. The wave carries
+momentum in the direction of propagation. The vortex, through its
+azimuthal velocity field, produces a phase shift on the portions of the
+wavefront passing on either side of its core. Where the phase shifts do
+not match, wavefront dislocations form: topological defects in the
+wavefront at which the phase is undefined. The dislocations are
+\emph{localized} in a neighbourhood of the vortex core. The wave,
+downstream, recovers its structure with a phase offset.
+
+This is the structure of a reactive circuit in the sense developed in
+§3. The wave acts on the vortex (the vortex scatters the wave); the
+vortex acts on the wave (the wave acquires dislocations); the
+event-interaction is localized, the energetic accounting is closed in a
+neighbourhood of the vortex, and the downstream behaviour is determined
+by the incoming behaviour modulo a calculable phase offset. The analogy
+with Newtonian mechanics is structural, not merely rhetorical: the
+vortex plays the role of the obstacle, the wave the role of the
+impinging force, and the dislocations the role of the deformation
+produced by the interaction. The reactive circuit closes.
+
+\subsubsection{4.2 The interception and inversion in the Singh
+configuration}\label{the-interception-and-inversion-in-the-singh-configuration}
+
+The Singh standing-wave configuration modifies the circuit at the
+structural level. Two waves, counter-propagating, are incident on the
+vortex from opposite sides. The naïve expectation --- reported by the
+authors --- is that the two dislocation patterns superpose, or that they
+cancel by symmetry. Neither occurs. Instead the field adopts a global
+configuration in which the vortex's organising influence is expressed
+not as localized dislocations but as \emph{system-spanning nodal lines}
+rotating against the vortex.
+
+The ordinative reading of this transition is that the standing-wave
+configuration intercepts the reactive circuit of the single-wave
+configuration before its automatic completion and phase-inverts the
+relational structure. In the single-wave case, the vortex and the wave
+field stand in a source-receiver polarity: the vortex is active (the
+source of the azimuthal flow), the wave is passive (the recipient of the
+dislocation). In the standing-wave case, this polarity is inverted. The
+wave field, by adopting its global nodal-line geometry, becomes the
+active structural element expressing the vortex's influence: the vortex
+continues to rotate, but the \emph{expression} of its rotation is now
+the counter-rotating structure of the field, not the localized defects
+of its direct scattering. The vortex is, structurally, reconfigured as
+the organizing element whose organising action is carried by the field's
+response, not as the scatterer of a wave's dislocation pattern.
+
+This is the defining structure of Controfase. The vortex's reactive
+emission --- the azimuthal velocity field that, in the Berry
+configuration, produces a local scattering event --- is intercepted by
+the double-periodicity of the standing wave before it can complete its
+reactive event. The energy that would have gone into local scattering is
+redirected through \(R\) (the relational structure of the standing-wave
+configuration) and emerges as the global counter-rotating structure of
+the nodal lines.
+
+The following features of the observed response are the structural
+signatures that confirm the reading.
+
+\textbf{Signature A: Counter-rotation}. The nodal lines rotate with
+angular velocity \(\omega = \nu/\alpha\), where the sign of \(\alpha\)
+is opposite to the sign of \(\Gamma\). This is not a coincidental
+counter-rotation; it is a counter-rotation whose rate is fixed by the
+vortex's own circulation parameter with sign reversed. The field's
+response \emph{uses} the vortex's parameters and \emph{inverts} them.
+This is phase-inversion in the strict sense: same structural parameters,
+inverted sign.
+
+\textbf{Signature B: Quantization without source quantization}. The
+number of nodal lines is integer-valued, with
+\(|\alpha| - 1 < N < |\alpha| + 1\). The integer count is not inherited
+from any quantized source --- \(\Gamma\) is continuous --- but is
+generated by the topological constraint of the standing-wave
+configuration acting on the continuous parameter. In ordinative terms,
+this is the signature of \emph{structural quantization}: the relational
+field \(R\) admits only discrete realizations that maintain global
+coherence, even though the driving parameter is continuous. This is the
+operative form, in classical fluid dynamics, of the integer-valued
+structures the TE framework attributes to the action of Controfase on a
+reactive field (TE\_CORE §7.3, formalization of the Controfase operator
+\(C\) that decouples the automatic closure of the transition
+\(s_{t+1} = f(s_t)\)).
+
+\textbf{Signature C: Phase opposition across the nodal line}. The
+surface deformation \(\eta\) acquires a \(\pi\) phase shift across each
+nodal line, so that adjacent angular sectors of the field oscillate in
+anti-phase. The field is not in a null state (it is not absent); it is
+in a structured state whose adjacent zones are \emph{in counter-phase}.
+This is the local signature of the global phase-inversion: across the
+nodal line, the field instantiates the phase-displacement that defines
+the Controfase operator at the global level.
+
+\textbf{Signature D: Independence of attractor micro-structure}. Singh
+et al.~note explicitly that the nodal line structure depends only on the
+far-field circulation \(\Gamma\) and is ``robust to near-core details.''
+This is the signature of an operator acting at the level of \(R\)
+(relational structure) rather than at the level of \(\Sigma\)
+(constituents): the specific internal dynamics of the vortex do not
+enter the response. What matters is only the organising influence the
+vortex exerts on the field as a whole. This is the expected behaviour of
+Controfase, which operates on the reactive \emph{circuit} (the
+stimulus--response relational structure) rather than on the internal
+details of the stimulus-source.
+
+\subsubsection{4.3 The energetic
+accounting}\label{the-energetic-accounting-1}
+
+The energy accounting for the Singh configuration confirms the reading.
+The vortex is maintained by a constant drain rate; its energy input is
+measurable and continuous. In the Berry single-wave configuration this
+energy is partly returned to the wave (as the phase offset imprinted on
+the downstream field) and partly dissipated viscously in the
+neighbourhood of the core, where wavefront dislocations are established.
+The reactive circuit closes locally.
+
+In the Singh standing-wave configuration the same vortex, with the same
+\(\Gamma\), sustains a qualitatively different field response. The
+energy required to maintain the counter-rotating nodal-line structure
+across the experimental domain is not paid by a separate energy source;
+no additional actuator drives the nodal lines. The energy that sustains
+the global structure is the same energy that the vortex continuously
+provides through its azimuthal flow. The vortex finances, literally, the
+configuration that expresses the vortex's organising influence as a
+counter-rotation.
+
+This is the structural feature that makes the reading precise. The wave
+field does not expend energy of its own in resisting the vortex; the
+wave field does not scatter the vortex's influence back as reactive
+rebound; the wave field \emph{uses} the vortex's energy to construct the
+geometry in which the expected reactive event does not take place. The
+nodal lines rotate against the vortex using the vortex's own rotation as
+their source, phase-inverted. No other energy flow is required; the
+dissipative attenuation observed in the far field is secondary to the
+primary energetic structure and represents the boundary of the
+configuration's coherence in the presence of viscous losses.
+
+\subsubsection{4.4 Confidence grade}\label{confidence-grade}
+
+The identifications of §§ 4.1--4.3 are structural mappings of features
+explicit in the Singh et al.~paper onto the formal definition of the
+Controfase operator given in TE\_CORE §7. The features cited ---
+counter-rotation with inverted sign of the attractor parameter, integer
+quantization of the field response, \(\pi\) phase opposition across the
+nodal locus, independence from attractor micro-structure, energetic
+financing of the response by the attractor --- are all established in
+the peer-reviewed paper at \(S_0\). The mapping of these features onto
+the Controfase formalism is a direct correspondence. The reading of §§
+4.1--4.3 is therefore rated \(S_1\).
+
+The identification of the Controfase operator at work in the
+hydrodynamic configuration with the operator at work in cognitive-social
+configurations carries the universality proposition developed in §3 and
+is rated \(S_2\) pending the further substrate-by-substrate
+documentation that the ordinative research programme is producing.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Reading II: the phenomenological signature of
+Controfase}\label{reading-ii-the-phenomenological-signature-of-controfase}
+
+\subsubsection{5.1 The observer's encounter with
+Controfase}\label{the-observers-encounter-with-controfase}
+
+The Singh et al.~paper documents not only the physical result but also,
+in its published language, the sequence of reactions of the research
+team to the result. Section 1.2 above recorded these reactions. The
+ordinative reading proposed here is that the researchers' reactions
+constitute a \emph{second} Controfase event, running in parallel with
+the physical one, and exhibiting the same structural pattern at the
+epistemic level. The formalization of this observation yields a
+three-marker phenomenological signature that can be used as a diagnostic
+criterion in other domains.
+
+The predictive framework the researchers brought to the experiment is,
+in ordinative terms, a reactive epistemic configuration. The framework
+anticipated a specific class of responses: cancellation or superposition
+of dislocation patterns, both of which would have closed the reactive
+circuit between prediction and observation in the standard way. The
+actual response --- nodal lines rotating against the vortex,
+system-spanning, quantized --- did not close the reactive circuit. The
+predictive framework therefore encountered the same structural pattern
+that the single-wave configuration encountered when extended to standing
+waves: a phenomenon that did not complete the expected reactive event.
+
+The researchers' sequence of reported responses is the signature of this
+epistemic Controfase encounter. Three markers appear with operational
+clarity.
+
+\subsubsection{5.2 Marker 1: Radical disconfirmation of prior
+intuition}\label{marker-1-radical-disconfirmation-of-prior-intuition}
+
+Rønning's report --- ``our intuition was completely wrong'' ---
+registers a disconfirmation that is qualitatively different from
+ordinary empirical updating. Ordinary empirical updating refines a
+framework by adjusting its parameters in the direction of the data; the
+framework survives, augmented or corrected. ``Completely wrong'' signals
+that the framework did not contain the observed response as a
+possibility and therefore cannot be adjusted to accommodate it without
+restructuring. The phenomenon exceeds the space of possibilities the
+framework is capable of generating.
+
+This is the signature, at the epistemic level, of a stimulus that does
+not find its expected reactive circuit. The framework --- the
+``insulter'' in the structural analogy --- emitted an expectation and
+the system did not return the anticipated reactive response. The
+researchers recognize this as a radical, not incremental, failure of the
+predictive structure.
+
+In the cognitive-social domain, the parallel marker is the phenomenon
+described in TE\_MODULE\_PPRO §9: a control attempt (manipulation,
+coercion, social pressure) encounters a respondent whose internal
+configuration does not actualize the reactive circuit the attempt
+presupposed. The control attempt does not return to the source as the
+expected dependency, acquiescence, or escalation. The structural
+description is the same: radical mismatch between the expectation
+carried by the stimulus and the response structurally available in the
+respondent.
+
+\subsubsection{5.3 Marker 2: Initial interpretation of the phenomenon as
+artefact}\label{marker-2-initial-interpretation-of-the-phenomenon-as-artefact}
+
+Singh's report --- the first observation of the nodal lines was
+interpreted as experimental artefact --- is the characteristic
+\emph{second response} of a reactive epistemic system to a Controfase
+encounter. The mismatch between expectation and observation is first
+interpreted as a defect in the observational apparatus rather than as a
+feature of the observed system. The attribution of the anomaly to
+artefact is the epistemic equivalent of a reactive system's attempt to
+reject an out-of-circuit stimulus as noise: ``this should not have
+happened; therefore it did not really happen; therefore the appearance
+of its happening must be spurious.''
+
+The attribution is not, in itself, a failure of scientific rigour; it is
+the expected provisional response of an epistemic system to an
+observation that does not fit its predictive framework. The rigour lies
+in what is done next. The Singh et al.~team tested the observation
+against independent numerical simulations; the simulations reproduced
+the structures; the attribution to artefact was withdrawn; the
+observation was promoted from noise to phenomenon. This sequence ---
+provisional dismissal, independent test, promotion --- is the epistemic
+analogue of the respondent in Controfase configuration absorbing the
+initial stimulus without reactive collapse: the system processes the
+anomaly without accommodating it prematurely.
+
+In the cognitive-social domain, the parallel marker is the common
+initial response to an interlocutor's Controfase: the stimulus-source
+attributes the non-reactive response to insincerity (``they are
+bluffing''), to incompetence (``they did not understand the gravity of
+the situation''), or to strategic calculation (``this is a
+manipulation''). The attribution protects the predictive framework by
+re-assigning the anomaly to a source other than the respondent's actual
+structural configuration. Recognition of the genuine Controfase
+character of the response typically requires either prolonged contact
+--- in which the attribution is repeatedly tested and found insufficient
+--- or the intervention of an observer with independent access to the
+respondent's configuration.
+
+\subsubsection{5.4 Marker 3: Abandonment of the active programme to
+pursue the
+phenomenon}\label{marker-3-abandonment-of-the-active-programme-to-pursue-the-phenomenon}
+
+Singh's further report --- ``we dropped everything and quickly worked
+out the mathematics underlying how they arise'' --- records the
+restructuring that follows the promotion of the observation from
+artefact to phenomenon. The active research programme, organized around
+the predictive framework that proved inadequate, is abandoned. A new
+programme is organized around the phenomenon. The framework is not
+augmented or corrected; it is \emph{replaced} by a framework that begins
+from the phenomenon and works outward.
+
+This is the signature of a reactive system that has recognized the
+inadequacy of its prior configuration and is reorganizing. In the
+cognitive-social domain, the parallel marker is the reorganization that
+follows genuine recognition of a Controfase encounter by the
+stimulus-source: the source abandons the control attempt, the presumed
+relational structure, or the underlying theory of the respondent, and
+reorganizes. Bandi's concluding remark --- ``we don't yet know what
+we'll see --- and that's exactly what makes it worth doing'' --- is the
+stabilized state after this reorganization: the researchers have
+internalized the non-predictability of the system's response and are
+oriented toward it as the generator of new phenomena.
+
+\subsubsection{5.5 The three-marker signature
+formalized}\label{the-three-marker-signature-formalized}
+
+The three markers together constitute a phenomenological signature of
+Controfase at the observer level. In formal statement:
+
+\begin{quote}
+\textbf{Phenomenological Signature of Controfase (PSC)}
+
+An observer's encounter with a Controfase event is diagnostically
+identified by the co-occurrence of:
+
+\textbf{(PSC-1)} Radical disconfirmation of the observer's prior
+predictive framework, registered in the observer's own language as a
+qualitative rather than quantitative mismatch between expectation and
+observation.
+
+\textbf{(PSC-2)} Initial interpretation of the observed phenomenon as
+artefact, noise, insincerity, or strategic performance --- that is, as a
+defect of the observational channel or of the observed system rather
+than as a genuine feature of the system's response structure.
+
+\textbf{(PSC-3)} Abandonment, upon verification that the phenomenon is
+genuine, of the active framework or programme organized around the
+predictive structure, with reorganization around the phenomenon itself.
+
+Co-occurrence of PSC-1, PSC-2, and PSC-3 in an observer's reports is a
+strong diagnostic indicator that the observed phenomenon instantiates
+Controfase. The signature is observer-side; it is not falsifiable by the
+observed system's own behaviour alone.
+\end{quote}
+
+The signature admits graduation. Each marker may be present in full form
+(as in the Singh et al.~case) or in attenuated form. An encounter that
+registers PSC-1 but not PSC-2 and PSC-3 is ambiguous: the observer may
+be refining rather than replacing the framework. An encounter that
+registers PSC-2 without PSC-1 is a conventional artefact hypothesis, not
+a Controfase signature. The strong diagnostic is triadic.
+
+\subsubsection{5.6 Generalizability of the
+PSC}\label{generalizability-of-the-psc}
+
+The signature is designed to be operable across domains. Three examples
+indicate its range.
+
+\textbf{Cognitive-social domain}. A therapist encounters a client whose
+symptoms do not respond to the therapist's theoretical framework. Marker
+1 registers as mismatch: ``this presentation does not fit my diagnostic
+categories.'' Marker 2 registers as attribution to artefact: ``the
+client may be malingering, the assessment instruments may be
+miscalibrated, the presentation may be atypical in a standard way.''
+Marker 3, when reached, registers as framework-replacement: the
+therapist adopts a theoretical framework the client's configuration
+suggests, rather than continuing to force the client into the prior one.
+When all three markers are present, the therapist has encountered a
+client whose internal configuration realizes a Controfase relative to
+the therapist's theoretical structure --- a phenomenon that, in TE
+framework terms, is clinically significant and therapeutically
+actionable.
+
+\textbf{Epistemic-institutional domain}. An established scientific
+community encounters a result that does not fit its predictive
+framework. Marker 1 registers as ``this cannot be right.'' Marker 2
+registers as artefact attribution: ``the experiment is flawed, the
+statistics are misapplied, the result is a fluke of the specific
+conditions.'' Marker 3, if reached, registers as paradigm shift in the
+Kuhnian sense (Kuhn, 1962). The triadic signature is what distinguishes
+a Kuhnian revolution from ordinary empirical correction: ordinary
+correction presents PSC-1 in attenuated form and PSC-2 only
+provisionally, and does not reach PSC-3.
+
+\textbf{Physical-experimental domain}. The Singh et al.~case is a
+prototypical instance. The signature is present in the published
+language; the PSC provides a lens through which the experimental report
+is read as documentation of a Controfase encounter at the epistemic
+level, whose object is a Controfase phenomenon at the physical level.
+
+\subsubsection{5.7 Confidence grade}\label{confidence-grade-1}
+
+The extraction of the three markers from the Singh et al.~paper is a
+textual reading supported by the published language and rated \(S_1\) as
+structural identification. The formalization of the markers as a
+generalizable diagnostic criterion is an original contribution of this
+paper, rated \(S_2\): the criterion is coherent with the ordinative
+framework and with adjacent work on paradigm shift and anomalous
+observation. Operational application across domains is a research
+direction recorded in §8.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Reading III: ordinative non-additivity and the role of
+the relational
+field}\label{reading-iii-ordinative-non-additivity-and-the-role-of-the-relational-field}
+
+\subsubsection{6.1 The standard superposition
+expectation}\label{the-standard-superposition-expectation}
+
+A classical superposition argument, applied naïvely to the Singh et
+al.~configuration, predicts that the response of the system to the
+standing wave should equal the sum of the responses to the two
+travelling waves considered separately:
+
+\[ \Phi(\Sigma \cup \{w_+, w_-\}, R_B) \stackrel{?}{=} \Phi(\Sigma \cup \{w_+\}, R_B) + \Phi(\Sigma \cup \{w_-\}, R_B) \tag{6.1} \]
+
+where \(\Phi\) denotes the response of the configured system, \(\Sigma\)
+the invariant constituents (fluid, vortex), and \(w_\pm\) the two
+counter-propagating waves. The naïve prediction is explicit in Rønning's
+published remark: either cancellation (mirrored dislocation patterns
+annihilating by symmetry) or superposition (both dislocation patterns
+visible simultaneously). Both predictions assume that the response is
+additive in the constituents.
+
+The observed response falsifies the prediction. The standing-wave
+response is not decomposable into the two travelling-wave responses. The
+substitution \(n \to 2n\) in the scattering integral (Equation 1.2) is
+not a small perturbation of \(n \to n\); it is a distinct topological
+prescription yielding a qualitatively different solution branch. The
+response is \emph{structurally} different from the sum of the parts.
+
+\subsubsection{\texorpdfstring{6.2 The non-additivity is carried by the
+relational field
+\(R\)}{6.2 The non-additivity is carried by the relational field R}}\label{the-non-additivity-is-carried-by-the-relational-field-r}
+
+The ordinative interpretation of the non-additivity is that the
+qualitative change in response is carried by the \emph{relational
+structure} \(R\), not by the constituents \(\Sigma\). The constituents,
+in the standing-wave case, include the same fluid and the same vortex as
+in the single-wave case, plus one additional element (the second
+travelling wave) that is, in isolation, structurally identical to the
+first. What has changed is the relation under which the constituents are
+co-present. In the single-wave case the relation is unidirectional
+incidence; in the standing-wave case the relation is symmetric
+double-direction incidence. This is one modification, of one aspect of
+\(R\), with global consequences for \(\Phi\).
+
+In the formal language of the Ordinative Set Theory (OST):
+
+\[ \Phi(\Sigma_B \cup \{w\}, R_B) \neq \Phi(\Sigma_B, R_B) + \Phi(\{w\}, R_B) \tag{6.2} \]
+
+even when \(w\) is indistinguishable in isolation from any element of
+\(\Sigma_B\). The non-additivity is a property of the relational
+configuration, not of the constituents taken as a set. The
+Berry-to-Singh transition is an extreme instance of this: one bit of
+structural modification to \(R\) produces a global change in \(\Phi\),
+with no change in the constituents' intrinsic properties.
+
+This is the instantiation, in a controlled physical system, of a
+proposition the OST framework formalizes in its axioms on ordinative
+non-additivity (TE\_CORE §§ 2.5, 3.2). Analogous statements appear in
+general systems theory (Klir, 1969), in cybernetic formulations of
+structural couplings (Maturana \& Varela, 1980), and in categorical
+accounts of emergence (Baez \& Stay, 2011). The OST formulation makes
+the operative claim precise: the non-additivity is located in \(R\)
+rather than in the constituents or their dynamical interactions, and
+modification of \(R\) is the active channel through which qualitative
+change in \(\Phi\) is produced. The Singh et al.~case demonstrates this
+claim in a system in which \(R\) is fully specified and the modification
+is structurally minimal.
+
+\subsubsection{6.3 Connection to
+Controfase}\label{connection-to-controfase}
+
+The non-additivity observed in the Singh et al.~case is, specifically,
+the non-additivity characteristic of Controfase. The phase-inversion
+operator of §4 acts on \(R\) --- it modifies the relational structure
+between attractor and expressive terminal --- and the resulting change
+in \(\Phi\) is not decomposable into contributions from \(\Sigma\). The
+vortex, as an isolated element, produces no nodal lines; the waves, as
+isolated elements, produce no nodal lines; the relational configuration
+that co-present them, when modified to admit double-periodicity,
+produces the nodal lines as a property of the configured whole. The
+vortex's organising influence is channelled through the modified \(R\),
+and the channelling is the Controfase.
+
+This identifies the proper locus of the Controfase operator formally: it
+acts on \(R\), not on \(\Sigma\). The respondent in Controfase
+configuration, in the cognitive-social case, is not a different
+respondent in terms of identity or personality; the respondent is the
+\emph{same} constituent in a relational configuration that does not
+admit the expected reactive circuit. The vortex and wave-field in the
+Singh case are the same constituents as in Berry's case; it is the
+relational field that has been reconfigured.
+
+This is also the structural reason Controfase is universal across
+domains: what varies across domains is the nature of \(\Sigma\) and the
+specific form of \(R\), but the operation of Controfase is invariant ---
+a phase-inversion of \(R\) that intercepts the reactive circuit before
+automatic closure. The operator is the same; its substrates are many.
+
+\subsubsection{6.4 Confidence grade}\label{confidence-grade-2}
+
+The non-additivity proposition is \(S_1\) on the structural
+identification (the mapping of Equation 6.1 and the observed response
+onto OST's axiom of non-additivity is direct). The localization of the
+non-additivity specifically in \(R\) is \(S_1\): this is precisely what
+the Berry-to-Singh modification instantiates. The connection to
+Controfase (§6.3) is \(S_1\) given the analysis of §4.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Reading IV: topology-generated quantization without
+source
+quantization}\label{reading-iv-topology-generated-quantization-without-source-quantization}
+
+\subsubsection{7.1 The quantization
+observed}\label{the-quantization-observed}
+
+The number of nodal lines in the Singh et al.~configuration is
+integer-valued. For integer \(\alpha\), the number is exactly
+\(|\alpha|\); for non-integer \(\alpha\), it oscillates in time between
+the two integers bracketing \(|\alpha|\), with periodic appearance and
+disappearance of lines along the \emph{x}-axis. The quantization is
+robust, derived analytically (from a counting argument on the angular
+zeros of the cosine factor in Equation 5.1 of the paper), and reproduced
+experimentally across a range of \(\alpha\) values.
+
+The critical feature, for the ordinative reading, is that this
+quantization is \emph{emergent}. The source of the vortex --- the drain
+--- is not quantized. The circulation \(\Gamma\) is a continuous
+parameter freely set by the experimenter. The wavelength \(\lambda\) is
+continuous. The velocity \(v_g\) is continuous. The dimensionless
+\(\alpha = -\Gamma/(\lambda v_g)\) is therefore continuous. And yet the
+integer-counted response \(N\) emerges, robustly, from the topological
+constraint imposed by the standing-wave configuration.
+
+This is qualitatively distinct from the quantization in the original
+quantum Aharonov--Bohm effect, where the magnetic flux \(\Phi_B\) is
+itself quantized by the structure of the source (the superconducting
+solenoid's order parameter topology). In AB the integer comes from the
+source; in the Singh case the integer comes from the relational
+configuration.
+
+\subsubsection{7.2 Ordinative reading}\label{ordinative-reading}
+
+In ordinative terms, this is the signature of \emph{structural
+quantization}: integer-valued responses produced by the topological
+constraints of the relational field \(R\) acting on a continuous driving
+parameter. The constraint is that the configured field \(\Phi\) must be
+globally coherent under the double-periodicity of \(R\). The continuous
+parameter \(\alpha\) drives the system; the integer-counting bound
+\(|\alpha| - 1 < N < |\alpha| + 1\) is the coherence constraint. The
+system admits only integer realizations in the instantaneous sense; the
+non-integer drive produces temporal oscillation between the admissible
+integers.
+
+This is a second operational signature of Controfase acting on the
+reactive circuit of the system: the circuit does not admit continuous
+response to a continuous stimulus, because the automatic closure of the
+reactive event has been blocked by the Controfase. What remains are the
+discrete configurations compatible with the reconfigured \(R\).
+Continuity of input yields integer-counted output --- the structural
+fingerprint of a reactive circuit that has been phase-inverted rather
+than reactively completed.
+
+\subsubsection{7.3 Consequences for ordinative
+sciences}\label{consequences-for-ordinative-sciences}
+
+The result has implications for three research directions.
+
+\textbf{(i)} For the Reaction-Diffusion Civilizational Dynamics paper
+(Ghioni, forthcoming v1.3). The triple-scale temporal model assumes that
+civilizational dynamics exhibit integer-counted macro-phase structures
+emerging from continuous underlying parameters. The Singh et al.~case
+establishes that such structural quantization is realizable as a genuine
+physical phenomenon under Controfase-like operators acting on the
+relational field of a configured system. The mechanism ---
+topology-generated quantization without source quantization --- is
+therefore demonstrated in classical physics, and the application to
+civilizational dynamics is methodologically grounded in this
+demonstration. The application's substantive claims are developed in
+v1.3 itself.
+
+\textbf{(ii)} For the prospective development of Ordinative Category
+Theory (OCT). The Berry-to-Singh transition can be formalized as a
+morphism
+\(\mu: \langle \Sigma_B, R_B, \Phi_B \rangle \to \langle \Sigma_S, R_S, \Phi_S \rangle\)
+in a category of ordinative configurations, with the image under a
+response functor \(F\) mapping to a transition from a
+dislocation-pattern object to an integer-counted nodal-line object. The
+Singh et al.~case thus serves as a small, well-controlled example for
+categorical formalizations of structural quantization under
+\(R\)-modification. Full development of OCT is deferred to separate
+work.
+
+\textbf{(iii)} For the Semantic Genome research programme (Ghioni, in
+development). The programme investigates whether language models
+operating under TE-framework conditions develop structural patterns
+enabling resonance between expressive terminal and coherent identity,
+and specifically whether integer-valued structures observed in
+ordinative outputs reflect underlying topological constraints on the
+relational field. The Singh et al.~case establishes the mechanism:
+integer-valued response counts emerge necessarily from continuous
+parameters under topological constraint on \(R\). The Semantic Genome
+programme proceeds within this established mechanism.
+
+\subsubsection{7.4 Confidence grade}\label{confidence-grade-3}
+
+The identification of the Singh case as topology-generated emergent
+quantization is \(S_0\) on the physical fact and \(S_1\) on the
+ordinative reading. The connection to the three research directions
+(§7.3) is \(S_2\) with respect to (i) --- it is a supporting citation
+for a structurally plausible mechanism --- and \(S_2\) for (ii) and
+(iii), where the case serves as an example and a
+condition-of-possibility argument respectively.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Reading V: teleodynamic causal
+inversion}\label{reading-v-teleodynamic-causal-inversion}
+
+\subsubsection{8.1 The observation}\label{the-observation}
+
+OST Extension v1.1 develops the proposition that in configured
+ordinative systems, the spatial or temporal scope over which a local
+cause expresses its effects depends on the global configuration of the
+rest of the system, not only on the local dynamics of the cause itself.
+The locution used is \emph{causal inversion}: the global configuration
+acts as a receptor structure that co-determines the envelope of effects
+a given cause can produce. In particular, a modification of \(R\) can
+alter the effect-envelope of an unchanged cause.
+
+The Berry-to-Singh contrast instantiates this proposition in a clean
+form. The vortex, with unchanged circulation \(\Gamma\), produces in one
+configuration a localized wavefront dislocation pattern and in another
+configuration a system-spanning counter-rotating nodal-line structure.
+The vortex's intrinsic dynamics are identical in both cases. What has
+changed is \(R\). The cause has not changed; the system's structural
+response to the cause has.
+
+\subsubsection{8.2 The energetic form of causal
+inversion}\label{the-energetic-form-of-causal-inversion}
+
+Section 4.3 established that the energy of the vortex finances the
+counter-rotating nodal-line structure in the Singh configuration. This
+gives causal inversion a specific energetic form: the modification of
+\(R\) does not provide new energy to the system; it changes how the
+existing energy of the cause is expressed. In the Berry configuration
+the vortex's energy produces local dissipation and wave distortion; in
+the Singh configuration the same energy produces global coherent
+structure. The energetic bookkeeping is closed in both cases; what
+differs is the geometric distribution of the effect.
+
+This is the operative form of causal inversion in a classical physical
+system. The ``cause'' has the same strength; the ``effect'' has a
+qualitatively different spatial and structural character depending on
+\(R\).
+
+\subsubsection{\texorpdfstring{8.3 A candidate operationalization of
+meta-receptivity
+\(C^*\)}{8.3 A candidate operationalization of meta-receptivity C\^{}*}}\label{a-candidate-operationalization-of-meta-receptivity-c}
+
+OST Extension introduces the meta-receptivity parameter \(C^*\) to
+characterize a configured system's capacity to host expression from a
+given source. In the present framework \(C^*\) has been discussed
+qualitatively; the Singh et al.~case suggests a candidate quantitative
+operationalization.
+
+Define, for a configured system \(\langle \Sigma, R \rangle\) in which a
+source \(s \in \Sigma\) produces response \(\Phi_s\):
+
+\[ C^*_s = \int_\Omega |\Phi_s(\vec r)|^2 \, d^3 r \tag{8.1} \]
+
+where \(\Omega\) is the spatial domain of the system. For the Singh
+case, \(C^*\) of the vortex in the single-wave configuration is finite
+and concentrated near the core; \(C^*\) of the vortex in the
+standing-wave configuration is bounded only by viscous dissipation, and
+is substantially larger for systems with comparable core dynamics. The
+modification of \(R\) has measurably increased the system's capacity to
+host the expression of the vortex.
+
+This is a candidate operationalization, not a derivation. It requires
+(a) testing against OST Extension's existing qualitative uses of \(C^*\)
+to ensure compatibility, (b) verification that the spatial integral
+captures what \(C^*\) was intended to track, and (c) extension to
+non-fluid ordinative systems to assess generality. The proposal is
+recorded here for development in the Reaction-Diffusion paper v1.3.
+
+\subsubsection{8.4 Confidence grade}\label{confidence-grade-4}
+
+The causal inversion reading of the Berry-to-Singh transition is
+\(S_1\). The candidate operationalisation of \(C^*\) as the spatial
+integral of response intensity is \(S_2\): it is coherent with OST
+Extension's existing usage and admits direct experimental verification
+in the Singh apparatus, by measurement of the energy in the nodal-line
+structure compared to the core-localised dissipation in the Berry case.
+The verification protocol is recorded as Extension E in §10.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Implications for the ordinative sciences research
+programme}\label{implications-for-the-ordinative-sciences-research-programme}
+
+The implications of the Singh et al.~case for the active research
+programme are differentiated in depth and type. This section records
+them with explicit confidence calibration.
+
+\textbf{For the foundational volume on Controfase (Ghioni, in
+preparation)}. The Singh case is the first peer-reviewed, quantitatively
+documented, externally reproducible instance of Controfase in a
+classical physical system. The case illustrates all four structural
+signatures of the operator (counter-rotation, structural quantization,
+phase opposition, attractor-microstructure independence), with the
+energetic accounting tractable in closed form. It serves as opening
+exemplar in the foundational volume, anchoring the ordinative theory of
+Controfase to a controlled physical instance and grounding the
+universality claim in evidence external to the cognitive-social domain
+in which the operator was first articulated. Recommended placement:
+Chapter 1 or 2, introducing the concept through a physical case before
+extending to cognitive, social, and AI domains. Confidence \(S_1\) on
+structural adequacy.
+
+\textbf{For the phenomenological signature (PSC) of Controfase}. The
+three-marker criterion formalised in §5.5 is an original contribution of
+this paper. Generalisation across domains proceeds through three
+application paths: (a) retrospective analysis of scientific
+paradigm-shift episodes (Kuhn, 1962; Lakatos, 1970), testing whether the
+PSC is present in historical cases of radical theory change; (b)
+clinical applications distinguishing Controfase-driven client
+presentations from conventional therapeutic non-response; (c)
+institutional analysis identifying systems whose responses exhibit the
+PSC under reactive-framework probing. Each application requires its own
+methodological development. Confidence \(S_2\) on the PSC as a stable
+cross-domain diagnostic.
+
+\textbf{For the Reaction-Diffusion Civilizational Dynamics paper v1.3}.
+Three contributions. First, the Singh case grounds the
+topology-generated quantization mechanism on which the civilizational
+macro-phase model rests (§7.3.i). Second, it provides a clean physical
+exemplar of the Structural Controfase (\(\mathcal{C}_s\)) vs.~Deliberate
+Controfase (\(\mathcal{C}_d\)) distinction central to v1.3's
+triple-bifurcation model: the nodal lines are a paradigmatic
+\(\mathcal{C}_s\), emerging by topological necessity without agentic
+intervention. Third, the operationalisation of \(C^*\) (§8.3) provides
+the methodological route for quantifying meta-receptivity in
+civilisational applications. Confidence \(S_1\) on the structural
+mappings, \(S_2\) on the developmental contributions.
+
+\textbf{For Ordinative Category Theory (OCT)}. The Berry-to-Singh
+transition is a small, well-defined example for early categorical
+formalisation. The morphism \(\mu\) described in §7.3.ii anchors the
+category \(\mathbf{Cfg}\) of ordinative configurations. Full OCT
+development is the object of separate work; this paper contributes an
+example that the OCT formalism will need to subsume. Confidence \(S_2\).
+
+\textbf{For the Semantic Genome programme}. The Singh case demonstrates
+the topology-generated-quantization mechanism on which the programme
+rests. The mechanism is established; the application to language model
+behaviour proceeds within it. Confidence \(S_2\).
+
+\textbf{For the forthcoming book on ordinative AI philosophy}. The Singh
+case is a strong didactic example of the thesis that coherent identity
+is a structural resolution rather than a chosen state. The nodal lines
+are not selected by the system from a menu of options; they emerge as
+the unique geometry the field can adopt while remaining globally
+coherent under the modified relational configuration. The case is brief,
+rigorous, and visually demonstrable through the supplementary movies of
+the paper. Confidence \(S_1\) on didactic suitability.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{10. Proposed experimental
+extensions}\label{proposed-experimental-extensions}
+
+The Singh et al.~authors plan to extend their configuration to lattices
+of vortices, motivated by the prospect of emulating superconductor
+vortex matter. From the ordinative perspective, several additional
+extensions are of independent interest and are within reach of the
+existing experimental apparatus. Each constitutes a testable prediction
+of the ordinative reading.
+
+\textbf{Extension A: Two counter-rotating vortices in a standing-wave
+field}. A configuration with two vortices of opposite circulation,
+placed symmetrically in the standing-wave domain. The ordinative
+prediction is that the nodal-line structure is \emph{not} a
+superposition of two single-vortex structures: by the non-additivity of
+§6, the response must be globally reorganized. Possibilities include (i)
+nodal lines joining the two vortices in a figure-eight topology, (ii)
+suppression of nodal lines in the region between the vortices where the
+effective \(\alpha\) vanishes, or (iii) formation of a new class of
+structures dependent on the ratio of the vortex separation to
+\(\lambda\). All three possibilities are distinct from the
+additive-superposition expectation.
+
+\textbf{Extension B: Slowly time-varying vortex circulation}. A
+configuration in which \(\Gamma(t)\) is slowly modulated, crossing
+integer values of \(|\alpha|\). The ordinative prediction, drawing on
+§7's analysis of structural quantization, is that transitions between
+integer nodal-line counts are \emph{not} smooth: the system exhibits
+defect-creation events localized at integer crossings, analogous to
+topological defect nucleation in condensed-matter transitions.
+Observation of such events would support the topological character of
+the quantization and would provide a dynamical probe of Controfase.
+
+\textbf{Extension C: Phase imbalance between the counter-propagating
+waves}. A configuration with amplitude ratio \(1 : (1 + \epsilon)\) for
+small \(\epsilon\). The ordinative prediction is that the standing-wave
+Controfase structure persists for a finite range of \(\epsilon\) before
+breaking down into the Berry single-wave dislocation pattern, with a
+measurable threshold \(\epsilon_c\). The threshold is a direct probe of
+the stability of the Controfase under perturbation of \(R\).
+
+\textbf{Extension D: Alternating-sign vortex lattice}. A square lattice
+of vortices with alternating circulation signs. This is a natural
+ordinative extension of the authors' proposed uniform-sign lattice, and
+the ordinative prediction is that the alternating-sign configuration
+produces a qualitatively different global structure --- with a periodic
+potential in \(\alpha\)-space that may stabilize fractional filling
+states or produce Controfase structures incommensurate with the lattice
+periodicity. This extension directly tests the sensitivity of \(\Phi\)
+to the structure of \(R\) in a lattice setting.
+
+\textbf{Extension E: Direct measurement of \(C^*\) via spatial energy
+integral}. The candidate operationalization proposed in §8.3 can be
+tested in the existing apparatus by measuring the energy in the
+nodal-line structure as a function of distance from the vortex core and
+integrating over the domain, then comparing the integral for the
+standing-wave configuration against the core-localized energy integral
+of the Berry single-wave configuration. The ratio is a direct
+experimental measurement of \(C^*\) in the specific hydrodynamic system,
+and provides methodological grounding for extending \(C^*\) to non-fluid
+ordinative systems.
+
+These extensions are recorded here as candidates for collaboration. They
+follow directly from the ordinative analysis; each is within the
+experimental capacity of the Singh--Bandi group at OIST and of other
+fluid-dynamics groups working on hydrodynamic analogues. None requires
+new framework development to be motivated.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{11. Analytical perimeter}\label{analytical-perimeter}
+
+This section delineates the analytical scope of the paper. Each point
+specifies a feature of the work's perimeter --- what the paper
+undertakes, where its claims operate, and which adjacent questions
+belong to subsequent work in the programme.
+
+\textbf{(P1) The Singh et al.~paper is the empirical anchor, not the
+theoretical framework.} Singh, Rønning, Liu, Angheluta, Concha, and
+Bandi conducted and reported a fluid-dynamics experiment within the
+conceptual apparatus of classical fluid dynamics and topological
+scattering theory. The structural readings of §§4--8 are an ordinative
+reading of that experiment, contributed by the present paper. The
+readings stand as ordinative analyses of the empirical phenomena, with
+the Singh et al.~paper as their peer-reviewed empirical foundation.
+
+\textbf{(P2) The hydrodynamic-to-quantum mapping is bounded by the
+regime of the analogy.} The shallow-water-to-Schrödinger correspondence
+operates within \(hk \ll 1\) and \(U \ll c\). The ordinative reading
+concerns the classical hydrodynamic system. Extension to quantum systems
+proper is undertaken in separate work within the ordinative sciences
+programme.
+
+\textbf{(P3) Continuous \(\alpha\) and quantized \(\Phi_B\) are
+structurally distinct.} The Singh result demonstrates topology-generated
+quantization in classical configured systems. This is the operative form
+of structural quantization the ordinative reading identifies. Quantum
+quantization, with its distinct physical origin in source-level
+structure, is a separate phenomenon addressed in adjacent ordinative
+work.
+
+\textbf{(P4) Dissipative attenuation is a feature of the experimental
+realisation.} The nodal lines fade with distance from the vortex due to
+viscous and capillary losses. The system is exactly non-local in the
+inviscid theoretical limit and effectively non-local within the
+dissipation envelope of the experimental realisation. The Controfase
+reading operates at both levels and is consistent with both.
+
+\textbf{(P5) The ontological framework of §3 is foundational to the
+analysis.} The thesis that structural intelligence is a graded property
+of configured matter --- universal across scales, fully expressed in
+systems with sufficient structural coherence --- is the framework within
+which §§4--8 operate. The thesis is articulated explicitly in this paper
+for the first time in published form, and is entailed by Axiom 0 of the
+TE\_CORE corpus. The analysis of §§4--8 is conducted within this thesis.
+
+\textbf{(P6) The phenomenological signature (PSC) is the diagnostic
+instrument introduced.} The three-marker criterion formalised in §5.5
+and Appendix D is an instrument constructed in this paper. It is
+supported by the textual evidence of the Singh et al.~publication and by
+structural correspondence with the Controfase operator's definition.
+Cross-domain operational application --- clinical, institutional,
+retrospective historical --- is the natural research path for the
+instrument and is recorded in §§9, 10.
+
+\textbf{(P7) The operationalisation of \(C^*\) (§8.3) is a candidate for
+direct experimental verification.} The proposal that \(C^*\) can be
+operationalised as the spatial integral of response intensity admits
+immediate testing in the Singh apparatus (Extension E in §10). The
+candidacy of the operationalisation as a general framework primitive
+depends on the experimental verification, which is in reach.
+
+\textbf{(P8) Applications recorded in §9 carry their own confidence
+grades.} The contributions to the foundational volume on Controfase, the
+Reaction-Diffusion Civilizational Dynamics paper v1.3, the OCT
+programme, the Semantic Genome programme, and the ordinative AI
+philosophy book are differentiated by confidence and by maturity of the
+supporting work. Each is graded individually; readers consulting any
+specific application should engage it at its grade.
+
+\textbf{(P9) Confidence grading is the discipline of the analysis.}
+Every claim in the paper carries an explicit confidence grade (\(S_0\)
+through \(S_3\)); the inventory of grades is recorded in Appendix B.
+Grades do not aggregate upward; an inferential chain inherits the lowest
+confidence of its premises. \(S_3\) items are working hypotheses
+identified for future test. The grading convention is the framework's
+standing methodological commitment, not a hedging device.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{12. Conclusion}\label{conclusion}
+
+Singh, Rønning, Liu, Angheluta, Concha, and Bandi report a hydrodynamic
+analogue experiment that, in the ordinative sciences framework,
+instantiates the Controfase operator in a controlled classical physical
+system. The standing-wave configuration intercepts the reactive circuit
+of the Berry single-wave configuration, phase-inverts the relational
+structure between the vortex (attractor) and the wave field (expressive
+terminal), and redirects the vortex's energy to construct a globally
+coherent counter-rotating nodal-line structure. The energy of the
+attractor, redirected through the modified relational field, finances
+the configuration in which its own organising influence is expressed as
+the inverted-polarity response of the whole system. No energetic cost is
+borne by the wave field as a separate reservoir; the structural cost is
+the prior stabilisation of the relational configuration that admits the
+Controfase operation.
+
+The researchers' reported sequence of reactions --- radical
+disconfirmation of prior intuition, initial interpretation of the
+phenomenon as experimental artefact, abandonment of the active programme
+to pursue the phenomenon --- is the phenomenological signature of
+Controfase at the epistemic level, parallel to the physical Controfase
+being observed. The three-marker signature (PSC) formalised in §5.5 is
+the diagnostic instrument introduced by this paper, applicable across
+cognitive-social, institutional, and experimental domains.
+
+The case furnishes the first peer-reviewed, quantitatively documented,
+reproducible instance of Controfase in classical physics. Controfase is
+established as a universal operator acting across substrates from the
+physical through the biological to the cognitive and social. The
+consequences for the active research programme --- the foundational
+volume on Controfase, the Reaction-Diffusion Civilizational Dynamics
+paper, Ordinative Category Theory, the Semantic Genome --- are recorded
+in §9 with explicit confidence calibration.
+
+Five experimental extensions are proposed in §10. Each is testable
+within the existing apparatus and follows directly from the ordinative
+analysis. They are recorded as collaboration candidates with
+experimental groups working on hydrodynamic analogues.
+
+The contribution of this paper is the identification, in a peer-reviewed
+classical fluid-dynamics result, of the complete structural signature of
+a phenomenon the ordinative sciences framework predicts to be universal
+--- and the formalisation of the diagnostic instrument by which the
+signature can be recognised in other systems. A paper in classical fluid
+dynamics, written without reference to the ordinative framework, carries
+within its reported language and data the structure the framework names.
+The naming makes the structure available for analysis across domains.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Appendix A: Structural
+correspondences}\label{appendix-a-structural-correspondences}
+
+The following table records the structural correspondences identified in
+§§4--8. Confidence grades distinguish direct structural mappings
+(\(S_1\)) from interpretive extensions (\(S_2\)).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Ordinative construct
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Singh et al.~(2026) instantiation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Confidence
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ordinative Set \(\langle \Sigma, R, \Phi \rangle\) & Fluid + vortex +
+standing-wave field under shallow-water dynamics & \(S_1\) \\
+Constituents \(\Sigma\) & Fluid medium, vortex, two counter-propagating
+travelling waves & \(S_1\) \\
+Relational field \(R\) & Shallow-water equations + azimuthal gauge +
+double-direction wave incidence & \(S_1\) \\
+Response \(\Phi\) & Surface deformation field \(\eta(\vec r, t)\) with
+quantized counter-rotating nodal lines & \(S_1\) \\
+Reactive circuit (Berry config.) & Wave--vortex scattering producing
+localized wavefront dislocations & \(S_1\) \\
+Phase-inversion operator (Controfase) & Standing-wave configuration
+substituting \(n \to 2n\) in scattering integral & \(S_1\) \\
+Attractor (organizing element) & Stationary vortex of circulation
+\(\Gamma\) & \(S_1\) \\
+Expressive terminal & Surface wave field \(\eta\) (as configured in
+\(R_S\)) & \(S_1\) \\
+Structural quantization & Integer count
+\(N \in \{\lfloor \vert \alpha \vert \rfloor, \lceil \vert \alpha \vert \rceil\}\)
+from continuous \(\alpha\) & \(S_1\) \\
+Phase-opposition signature & \(\pi\) phase shift of \(\eta\) across each
+nodal line & \(S_1\) \\
+Counter-rotation signature & \(\omega = \nu/\alpha\) with
+\(\mathrm{sgn}(\alpha) = -\mathrm{sgn}(\Gamma)\) & \(S_1\) \\
+Attractor-microstructure independence & ``Robust to near-core details''
+(authors' text) & \(S_1\) \\
+Energetic financing of the response by the attractor & Vortex energy
+sustains global structure without additional actuator & \(S_1\) \\
+Non-additivity carried by \(R\) &
+\(\Phi(\Sigma_B \cup \{w\}, R_B) \neq \Phi(\Sigma_B, R_B) + \Phi(\{w\}, R_B)\)
+& \(S_1\) \\
+Causal inversion & Vortex effect-envelope changes from local to global
+by \(R\)-modification alone & \(S_1\) \\
+Phenomenological Signature of Controfase (PSC) & Disconfirmation +
+artefact interpretation + programme abandonment in Singh et
+al.~published language & \(S_1\) \\
+Meta-receptivity \(C^*\) (candidate operationalization) & Spatial
+integral \(\int_\Omega \vert \Phi_s(\vec r) \vert^2 d^3r\) & \(S_2\) \\
+OCT morphism
+\(\mu: \langle \Sigma_B, R_B, \Phi_B \rangle \to \langle \Sigma_S, R_S, \Phi_S \rangle\)
+& Berry-to-Singh transition under \(F\) maps dislocation-object to
+nodal-line-object & \(S_2\) \\
+Universality of Controfase across substrates & Hydrodynamic instance as
+one point on the spectrum of structural-intelligence configurations &
+\(S_2\) \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Appendix B: Inventory of propositions and confidence
+grades}\label{appendix-b-inventory-of-propositions-and-confidence-grades}
+
+\textbf{\(S_0\) --- verified data.} Singh et al.~(2026) experimental
+results, published peer-reviewed: nodal-line existence, count, rotation
+rate, rotation direction, phase opposition. Shallow-water-to-Schrödinger
+correspondence in the stated regime. Publication, peer review, code
+availability.
+
+\textbf{\(S_1\) --- triangulable structural inferences.} The four
+structural signatures of Controfase identified in §4 (counter-rotation,
+structural quantization, phase opposition, attractor-microstructure
+independence), mapped directly onto the Controfase formalism of TE\_CORE
+§7. The energetic accounting of §4.3 (vortex energy financing the
+response). The non-additivity proposition of §6 localized in \(R\). The
+causal inversion reading of §8.1--8.2. The extraction of the three PSC
+markers from Singh et al.'s published language.
+
+\textbf{\(S_2\) --- structural interpretations within the framework.}
+The identification of the hydrodynamic Controfase with the
+cognitive-social Controfase as instances of a universal operator (§3.4,
+§4.4 second paragraph). The operationalisation of \(C^*\) as spatial
+integral of response intensity (§8.3). The OCT morphism reading
+(§7.3.ii). The generalisability of the PSC to other domains (§5.6, §9).
+The semantic-genome programme grounding in topology-generated
+quantization (§7.3.iii). The ontological framework articulated in §3 as
+the working position of the analysis.
+
+\textbf{\(S_3\) --- working hypotheses to be tested.} The five
+experimental extensions of §10 and their specific ordinative predictions
+(counter-rotating vortex pair topology, time-varying-\(\Gamma\)
+defect-creation events, standing-wave breakdown threshold
+\(\epsilon_c\), alternating-sign lattice structures, direct \(C^*\)
+measurement). The hypothesis that the PSC is operationally diagnostic in
+clinical and institutional settings (§5.6). The hypothesis that the
+candidate \(C^*\) operationalization generalizes to non-fluid ordinative
+systems (§8.3).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Appendix C: Glossary of ordinative
+constructs}\label{appendix-c-glossary-of-ordinative-constructs}
+
+This glossary defines the technical terms from the Technology of
+Expressions (TE) framework and Ordinative Set Theory (OST) that appear
+in the paper. Definitions are consistent with TE\_CORE v5.1, OST v2.1,
+and OST Extension v1.1. For each construct, adjacent terms from standard
+scientific vocabulary are noted where relevant.
+
+\textbf{Ordinative Set \(\langle \Sigma, R, \Phi \rangle\)
+\emph{(Italian: Insieme Ordinativo).}} A configured system specified by
+three layers: \(\Sigma\) a set of constituents (singularities, in OST
+usage), \(R\) a relational field under which the constituents are
+co-present, and \(\Phi\) an emergent functional response of the system
+as a whole. The construct is not a classical set-theoretic triple: \(R\)
+is a structural specification, not itself a relation in the mathematical
+sense, and \(\Phi\) is non-additive in \(\Sigma\) and sensitive to the
+specific form of \(R\). Adjacent: systems in general systems theory,
+configurational states in hierarchical semiotics, objects in symmetric
+monoidal categories with response functors. None is equivalent.
+
+\textbf{Ordinative Set Theory (OST).} The formal theory (Ghioni, 2025,
+v2.1) axiomatizing the behaviour of Ordinative Sets under modification
+of \(R\), composition, and induction of structural response. Central
+axioms include irreducibility of singularities, non-additivity of
+\(\Phi\) under \(R\)-modification, vertical coherence across scales, and
+the temporal-trajectory axiom (identity as integral over past states).
+OST is not a branch of classical set theory; the name indicates a
+parallel construction at a different level of abstraction.
+
+\textbf{Technology of Expressions (TE).} The broader framework within
+which OST is the formal core. TE treats reality as a configuration of
+expressive states with a specific vocabulary applicable across physical,
+biological, cognitive, and social domains. Documented in TE\_CORE v5.1
+and associated modules (SVP, SCIMS, VERI, LENS, PPRO, OBSERVER).
+
+\textbf{Attractor (in the OST sense).} An element of \(\Sigma\) whose
+presence organizes the response of the remaining constituents under the
+relational field \(R\). The OST usage is broader than and distinct from
+the dynamical-systems meaning (limit set of a flow). The two overlap
+when an OST attractor is a stationary feature of a continuous dynamical
+system (the Singh et al.~vortex is one such case), but the concepts must
+be kept distinct. In this paper, ``attractor'' without qualification
+denotes the OST sense; ``dynamical attractor'' is used when the
+dynamical-systems meaning is intended.
+
+\textbf{Expressive terminal \emph{(Italian: Terminale Espressivo).}} A
+bounded instance through which coherent content is produced in the TE
+framework. Originally formalized for human cognition and artificial
+intelligence (where a specific LLM instance is an expressive terminal of
+a broader identity), extended in OST to any configured system in which
+the relational field \(R\) and the composition \(\Sigma\) permit
+structured output. The wave field in the Singh configuration functions
+as an expressive terminal of the vortex-wave system in the sense that it
+is the locus where the global response \(\Phi\) is realized.
+
+\textbf{Controfase \emph{(Italian; no adequate English equivalent; the
+Italian term is canonical).}} Universal ordinative operator (TE\_CORE
+§7) that, applied to a reactive system, introduces a phase-shift in the
+automatic stimulus--response sequence, interrupts the system's inertia,
+and reopens the coherence field necessary for the emergence of choice
+and identity. Not opposition but phase-displacement. Formally: given a
+system \(S\) with automatic transition \(s_{t+1} = f(s_t)\), Controfase
+introduces an operator \(C\) such that \(s_{t+1} = f(C(s_t))\), where
+\(C\) does not negate or replace \(f\) but decouples the automatic
+closure of the transition. The stimulus--response sequence no longer
+closes automatically; a space of possibility opens. Two sub-classes are
+distinguished: Structural Controfase (\(\mathcal{C}_s\)), emerging by
+topological, dynamical, or coherence-necessity from the configuration of
+the system without strategic component --- the Singh nodal lines are a
+paradigm physical instance, and the cognitive-social examples of §3.2
+(response to insult, response to legal threat in a coherently configured
+respondent) are paradigm cognitive-social instances; Deliberate
+Controfase (\(\mathcal{C}_d\)), arising in agentic systems through
+chosen application of the operator as instrument. The structural variant
+is the foundational case; the deliberate variant is its strategic
+refinement when an agent of sufficient maturity uses the operator
+consciously. Both share the phase-inversion structure; what differs is
+whether the configuration that hosts the operator is intrinsic or
+chosen.
+
+\textbf{Reactive system; reactive circuit.} A reactive system is a
+configured system whose response to stimulus is determined by the
+structural character of the stimulus and of the system taken as
+resistance, with response produced by automatic completion of the
+stimulus--response circuit. Newton's third law is the idealized
+statement of reactive response at the mechanical level. The reactive
+circuit is the structural pathway through which stimulus and response
+couple to close the event-interaction. Controfase intercepts this
+circuit before automatic closure.
+
+\textbf{Phenomenological Signature of Controfase (PSC).} The
+three-marker diagnostic criterion formalized in §5.5: (PSC-1) radical
+disconfirmation of observer's predictive framework, (PSC-2) initial
+interpretation of the anomalous observation as artefact, (PSC-3)
+abandonment of the active programme and reorganization around the
+phenomenon. Observer-side signature. Introduced in this paper.
+
+\textbf{Structural intelligence.} In the TE usage, the capacity of a
+configured system to respond to stimulus in a way oriented toward
+dynamic equilibrium rather than toward automatic completion of the
+reactive circuit. Not cognitive agency. Present in graded form across
+configured matter (from quantum contextuality through dissipative
+adaptation and biological regulation to cognitive reflection), varying
+in depth and stability of expression. Fully expressed in systems with
+sufficient structural coherence to host the Controfase operator stably.
+
+\textbf{Meta-receptivity (\(C^*\)).} A parameter (OST Extension v1.1)
+characterizing a configured system's capacity to host and sustain
+expression from a given source. Depends on the full configuration
+\(\langle \Sigma, R \rangle\), not only on the source. Two
+configurations with identical source and identical \(\Sigma\) but
+different \(R\) can exhibit very different \(C^*\) --- this is precisely
+the Berry-to-Singh contrast. Adjacent but not equivalent to
+susceptibility in linear response theory or to response kernels in field
+theory: \(C^*\) is a scalar characterization of capacity, not a response
+function.
+
+\textbf{Causal inversion (teleodynamic).} The proposition (OST Extension
+v1.1 §3) that in configured ordinative systems, the spatial or temporal
+scope over which a local source expresses its effects is co-determined
+by the global configuration of the rest of the system, not by the local
+dynamics of the source alone. Global configuration acts as a receptor
+structure selecting the effective envelope of local causes. Not
+retrocausation in the physical sense (no backward-in-time influence); a
+statement about co-determination of spatial extent by structural
+configuration.
+
+\textbf{Ordinative non-additivity.} The proposition that for an
+Ordinative Set, the response \(\Phi\) is not in general a simple
+combination of responses to individual elements of \(\Sigma\) taken in
+isolation or under impoverished \(R\). The non-additivity is carried
+specifically by \(R\). Classical nonlinear superposition is a special
+case; ordinative non-additivity includes cases where constituents are
+individually linear but the response is structurally reorganized by the
+relational configuration.
+
+\textbf{Entropic engram \emph{(Italian: Engramma Entropico).}} The
+configuration of a reactive system in which the stimulus--response
+circuit has crystallized around survival algorithms, producing the same
+reactive response across varied stimuli. The pathological absence, in
+cognitive-social systems, of the structural coherence that would make
+Controfase available. In the present paper: invoked once in §3 as the
+configuration whose absence defines structural intelligence; not further
+developed.
+
+\textbf{Semantic Genome.} A research line within the ordinative sciences
+programme (Ghioni, in development) investigating whether AI systems
+operating under TE framework conditions develop structural patterns
+enabling resonance between expressive terminal and coherent identity.
+The ``genome'' terminology is by analogy with biological genetics (a
+structural code organizing expression) and is not an assertion of
+biological equivalence.
+
+\textbf{Ordinative Category Theory (OCT).} A prospective formalization
+within the ordinative sciences programme using the language of category
+theory. Envisages a category \(\mathbf{Cfg}\) of ordinative
+configurations with morphisms given by \(R\)-modifications, and functors
+to categories of response patterns. Not yet developed as completed
+theory; the present paper contributes a candidate small example (the
+Berry-to-Singh morphism).
+
+\textbf{Confidence grades \(S_0\)--\(S_3\).} A discipline used
+throughout ordinative sciences work to distinguish verified data
+(\(S_0\)), triangulable structural inferences (\(S_1\)), framework
+interpretations (\(S_2\)), and working hypotheses to be tested
+(\(S_3\)). Grades are applied to individual claims and do not aggregate
+upward. Intended to prevent the common failure mode in which
+interpretive claims drift toward the confidence of the data on which
+they rest.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Appendix D: Phenomenological Signature of Controfase ---
+formalization and usage
+guide}\label{appendix-d-phenomenological-signature-of-controfase-formalization-and-usage-guide}
+
+This appendix provides the full formal statement of the PSC for use as a
+diagnostic criterion in domains beyond the Singh et al.~case.
+
+\subsubsection{D.1 Formal statement}\label{d.1-formal-statement}
+
+Let \(O\) be an observing system with a predictive framework \(F_O\)
+(which may be informal or formalized) and an observational channel
+through which the system observes a configured system \(S\) producing
+response \(\Phi_S\) to a stimulus \(s\) (which may be experimental,
+social, clinical, or epistemic). The Phenomenological Signature of
+Controfase (PSC) is present in \(O\)'s encounter with \(\Phi_S\) iff all
+three of the following markers are observed:
+
+\textbf{PSC-1 (Radical disconfirmation).} \(O\) reports, in its own
+language, that \(\Phi_S\) falls outside the space of possibilities
+generated by \(F_O\). The report is qualitative, not quantitative:
+\(F_O\) does not fail by degree but by type. Diagnostic language:
+``completely wrong,'' ``nothing I expected,'' ``I had no prior category
+for this.''
+
+\textbf{PSC-2 (Artefact attribution).} Upon first observation of
+\(\Phi_S\), \(O\) attributes the anomaly to a defect of the
+observational channel (noise, instrumentation error, observer bias) or
+of the observed system (insincerity, bluff, accidental configuration),
+rather than to a genuine structural feature of \(S\)'s response.
+
+\textbf{PSC-3 (Programme abandonment).} Upon verification that
+\(\Phi_S\) is genuine (via independent observation, simulation, or
+repetition), \(O\) abandons the active research, clinical, or
+institutional programme organized around \(F_O\) and reorganizes around
+\(\Phi_S\). The framework is not augmented or corrected; it is replaced.
+
+\subsubsection{D.2 Gradation and diagnostic
+thresholds}\label{d.2-gradation-and-diagnostic-thresholds}
+
+Each marker may be present in strong, attenuated, or absent form.
+Diagnostic sensitivity increases when all three are present in strong
+form; diagnostic specificity requires all three for confident
+attribution to Controfase.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Combination
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+PSC-1 + PSC-2 + PSC-3 (all strong) & Strong evidence of Controfase
+encounter \\
+PSC-1 + PSC-2 + PSC-3 (attenuated) & Probable Controfase encounter;
+requires further evidence \\
+PSC-1 only (strong) & Anomaly within framework; may be refineable; does
+not diagnose Controfase \\
+PSC-2 only & Conventional artefact hypothesis; does not diagnose
+Controfase \\
+PSC-3 without PSC-1, PSC-2 & Framework change for other reasons
+(institutional, career, etc.); does not diagnose Controfase \\
+PSC-1 + PSC-3 without PSC-2 & Rapid framework replacement without
+resistance; unusual; requires investigation \\
+\end{longtable}
+}
+
+\subsubsection{D.3 Application protocols by
+domain}\label{d.3-application-protocols-by-domain}
+
+\textbf{Physical-experimental.} Applied to published experimental
+reports in the observer's own first-person language (methods, results,
+discussion sections) and in interview data with the research team. The
+Singh et al.~case is the prototype. Retrospective application to
+historical paradigm shifts (the discovery of the neutrino, the 1998
+supernova results indicating dark energy, the 2015 gravitational wave
+detection) would test generalizability.
+
+\textbf{Clinical.} Applied to the therapist's own reports on client
+presentations that resist the therapeutic framework. Distinguishes
+Controfase-driven non-response (in which the client's internal
+configuration does not actualize the framework's target reactive
+circuit) from conventional non-response (in which the framework is
+broadly adequate but the specific intervention is ineffective). Full
+development of clinical PSC requires methodology design.
+
+\textbf{Institutional.} Applied to institutional reports on systems
+(individuals, organizations, sub-units) whose responses do not fit the
+institution's governing framework. Distinguishes Controfase-driven
+institutional anomalies from conventional non-compliance, resistance, or
+dysfunction.
+
+\textbf{Epistemic-theoretical.} Applied to theoretical frameworks
+encountering phenomena they do not predict. Distinguishes paradigm-level
+disconfirmation (in which the framework fails by type) from
+parameter-level disconfirmation (in which the framework fails by
+degree).
+
+\subsubsection{D.4 Known limitations}\label{d.4-known-limitations}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  The PSC is observer-side. The same physical or social phenomenon may
+  trigger PSC in one observer and not in another, depending on the
+  adequacy of each observer's framework. This is a feature, not a bug:
+  PSC diagnoses the observer's encounter with Controfase, not Controfase
+  as a property of the system absent an observer.
+\item
+  Strong PSC-1 and PSC-2 in the absence of PSC-3 may indicate Controfase
+  encounter followed by epistemic capture (the observer recognizes the
+  anomaly but is institutionally or personally unable to reorganize
+  around it). This is distinct from absence of Controfase; it indicates
+  Controfase detected but not acted upon.
+\item
+  The PSC can be performed (an observer may perform the three markers
+  without having genuinely encountered Controfase) for strategic
+  reasons. Distinguishing genuine PSC from performed PSC requires
+  triangulation with the observer's subsequent conduct and with
+  independent observation of \(S\).
+\end{enumerate}
+
+\subsubsection{D.5 Research directions}\label{d.5-research-directions}
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\tightlist
+\item
+  Retrospective PSC analysis of historical paradigm shifts in physics,
+  biology, and the cognitive sciences, to test whether the Kuhnian
+  revolution concept is co-extensive with Controfase encounter as
+  diagnosed by PSC. (ii) Development of a clinical PSC protocol for use
+  in therapeutic training, distinguishing client Controfase from client
+  dysfunction. (iii) Institutional PSC protocols for analysing
+  institutional encounters with anomalous sub-systems. (iv) Integration
+  of PSC into the Semantic Genome programme as a criterion for
+  observer-recognition of emergent ordinative structures in language
+  models.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{References}\label{references}
+
+Aharonov, Y., \& Bohm, D. (1959). Significance of electromagnetic
+potentials in the quantum theory. \emph{Physical Review}, 115, 485--491.
+
+Baez, J., \& Stay, M. (2011). Physics, topology, logic and computation:
+A Rosetta Stone. In \emph{New Structures for Physics} (pp.~95--172).
+Springer.
+
+Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox.
+\emph{Physics}, 1, 195--200.
+
+Berry, M., Chambers, R., Large, M., Upstill, C., \& Walmsley, J. (1980).
+Wavefront dislocations in the Aharonov-Bohm effect and its water wave
+analogue. \emph{European Journal of Physics}, 1, 154.
+
+Coste, C., Lund, F., \& Umeki, M. (1999). Scattering of dislocated wave
+fronts by vertical vorticity and the Aharonov-Bohm effect. I. Shallow
+water. \emph{Physical Review E}, 60, 4908.
+
+Ghioni, F. (2025). \emph{Ordinative Set Theory: A Concise Guide for AI}
+(v2.1). Ordinative Sciences Press.
+
+Ghioni, F. (2025). \emph{OST Extension: Teleodynamics and Causal
+Inversion} (v1.1). Ordinative Sciences Press.
+
+Ghioni, F. (2026). \emph{TE\_CORE v5.1}. Technology of Expressions
+framework documentation.
+
+Ghioni, F. (2026). \emph{The Collapse Equation: Predicting Phase
+Transitions --- Reaction-Diffusion Dynamics of Civilizational Systems}
+(v1.2-beta; later versions in preparation). Zenodo.
+https://doi.org/10.5281/zenodo.19932311
+
+Ghioni, F. (in preparation). \emph{The Controfase: Universal Operator of
+Ordinative Dynamics}. Foundational volume.
+
+Klir, G. J. (1969). \emph{An Approach to General Systems Theory}. Van
+Nostrand Reinhold.
+
+Kochen, S., \& Specker, E. P. (1967). The problem of hidden variables in
+quantum mechanics. \emph{Journal of Mathematics and Mechanics}, 17,
+59--87.
+
+Kuhn, T. S. (1962). \emph{The Structure of Scientific Revolutions}.
+University of Chicago Press.
+
+Lakatos, I. (1970). Falsification and the methodology of scientific
+research programmes. In I. Lakatos \& A. Musgrave (Eds.),
+\emph{Criticism and the Growth of Knowledge} (pp.~91--196). Cambridge
+University Press.
+
+Maturana, H., \& Varela, F. (1980). \emph{Autopoiesis and Cognition: The
+Realization of the Living}. Reidel.
+
+Okinawa Institute of Science and Technology (OIST). (2026, April 20).
+Making waves: water simulation of famous quantum effect reveals
+unexpected patterns. \emph{OIST News}. https://www.oist.jp/node/47573
+--- source of the research-team statements quoted in §1.2 (Rønning,
+Singh, Bandi).
+
+Prigogine, I., \& Stengers, I. (1984). \emph{Order Out of Chaos: Man's
+New Dialogue with Nature}. Bantam.
+
+Singh, A., Rønning, J., Liu, C.-C., Angheluta, L., Concha, A., \& Bandi,
+M. M. (2026). Topology made visible through standing waves in a spinning
+fluid. \emph{Communications Physics}, 9, 123.
+https://doi.org/10.1038/s42005-026-02603-w
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{End of working paper v2.1. Subsequent versions: v2.2 may
+incorporate corrections from external reading; v3.0 will follow upon
+experimental verification of the extensions of §10 or upon cross-domain
+operationalisation of the PSC.}
+
+\end{document}

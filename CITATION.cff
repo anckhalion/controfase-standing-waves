@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use or cite this work, please cite it as below."
+type: generic
+title: "Controfase as Phase-Inversion Operator on the Reactive Circuit: An Ordinative Reading of Standing Waves in a Spinning Fluid"
+authors:
+  - family-names: Ghioni
+    given-names: Fabio
+    orcid: "https://orcid.org/0009-0009-0415-9434"
+    affiliation: "Ordinative Sciences Foundation ETS"
+version: "2.1"
+date-released: "2026-10-17"
+doi: 10.5281/zenodo.23439940
+license: CC-BY-4.0
+keywords:
+  - Controfase
+  - Technology of Expressions
+  - Ordinative Set Theory
+  - Aharonov-Bohm analogue
+  - standing waves
+  - nodal lines
+  - topological quantization
+  - structural intelligence
